@@ -1,38 +1,58 @@
-# Calendar App
+from tkinter import *
+import calendar
 
-This is a simple calendar application built using Tkinter in Python. The application allows users to view the calendar for a specific year.
+def display_calendar():
+    actual_year = int(year_entry.get())
 
-## Features
+    new_root = Toplevel()
+    new_root.title('Calendar Screen')
+    new_root.config(bg='black')
 
-- Display the calendar for a specified year.
-- Clear the input year entry.
-- Exit the application.
-- Responsive design with a black background for an enhanced user experience.
-- Powered by Tkinter, a standard Python GUI library.
+    calendar_content = calendar.calendar(actual_year)
+    calendar_text = Text(new_root, bg='black', fg='white', font='Consolas 10 bold', height=36, width=100)
+    calendar_text.insert(END, calendar_content)
+    calendar_text.config(state=DISABLED)
+    calendar_text.pack(padx=30, pady=30)
 
-## Getting Started
+    new_root.mainloop()
 
-To use the Calendar App, follow the instructions below:
 
-1. Clone the repository to your local machine.
-2. Make sure you have Python installed.
-3. Install the required dependencies by running the following command:
-4. Run the application by executing the `main.py` file:
-5. Enter a year in the input field and click the "Show Calendar" button to display the calendar for that year.
-6. Use the "Clear" button to clear the input field.
-7. Click the "Exit" button to close the application.
+def clear_entries():
+    year_entry.delete(0, END)
 
-## Contributing
 
-Contributions are welcome! If you have any ideas, suggestions, or improvements, feel free to open an issue or create a pull request.
+root = Tk()
+root.config(bg='black')
+root.title('Calendar App')
+root.geometry("400x400")
 
-## License
+header = Label(root, text='CALENDAR', bg='black', fg='white', font=('Arial', 32, 'bold'))
+header.pack(pady=25)
 
-This project is licensed under the [MIT License](LICENSE).
+year_frame = Frame(root, bg='black')
+year_frame.pack()
 
----
+lbl = Label(year_frame, text='Enter the year:', bg='black', fg='white', font=('Arial', 14))
+lbl.grid(row=0, column=0, padx=10, pady=10)
 
-Enjoy using the Calendar App! If you have any questions or need further assistance, please feel free to contact me.
+year_entry = Entry(year_frame, width=10, font=('Arial', 14))
+year_entry.grid(row=0, column=1, padx=10, pady=10)
 
+buttons_frame = Frame(root, bg='black')
+buttons_frame.pack()
+
+show_calendar = Button(buttons_frame, text='Show Calendar', fg='green', font=('Arial', 12, 'bold'), command=display_calendar)
+show_calendar.pack(side=LEFT, padx=10)
+
+clear_button = Button(buttons_frame, text='Clear', fg='blue', font=('Arial', 12, 'bold'), command=clear_entries)
+clear_button.pack(side=LEFT, padx=10)
+
+exit_button = Button(buttons_frame, text='Exit', fg='purple', font=('Arial', 12, 'bold'), command=root.destroy)
+exit_button.pack(side=LEFT, padx=10)
+
+credits = Label(root, text='Powered by Tkinter', bg='black', fg='white', font=('Arial', 10))
+credits.pack(side=BOTTOM, pady=10)
+
+root.mainloop()
 
 
