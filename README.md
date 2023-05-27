@@ -21,6 +21,8 @@ To use the Calendar App, follow the instructions below:
 5. Enter a year in the input field and click the "Show Calendar" button to display the calendar for that year.
 6. Use the "Clear" button to clear the input field.
 7. Click the "Exit" button to close the application.
+<img width="306" alt="2023-05-27" src="https://github.com/rakshureddy1308/Calender/assets/119916578/c4620277-2ded-4467-8911-632f55afce4b">
+
 
 ## Contributing
 
