@@ -19,9 +19,11 @@ To use the Calendar App, follow the instructions below:
 3. Install the required dependencies by running the following command:
 4. Run the application by executing the `main.py` file:
 5. Enter a year in the input field and click the "Show Calendar" button to display the calendar for that year.
+<img width="306" alt="2023-05-27" src="https://github.com/rakshureddy1308/Calender/assets/119916578/c4620277-2ded-4467-8911-632f55afce4b">
+
 6. Use the "Clear" button to clear the input field.
 7. Click the "Exit" button to close the application.
-<img width="306" alt="2023-05-27" src="https://github.com/rakshureddy1308/Calender/assets/119916578/c4620277-2ded-4467-8911-632f55afce4b">
+
 <img width="575" alt="2023-05-27 (1)" src="https://github.com/rakshureddy1308/Calender/assets/119916578/511fe21d-1cac-45bc-8527-626bdea0826a">
 
 
